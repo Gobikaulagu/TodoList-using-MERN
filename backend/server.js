@@ -6,17 +6,19 @@ require("dotenv").config();
 const app = express();
 const PORT = 5000;
 
-// Middleware
+// ✅ Middleware
 app.use(
   cors({
-    origin: "https://to-do-list-022.netlify.app/",
+    origin: "https://to-do-list-022.netlify.app", // 🔥 No trailing slash
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
-// MongoDB Connection
+// ✅ Now continue with your MongoDB connection and routes...
+
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
