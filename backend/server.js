@@ -9,7 +9,7 @@ const PORT = 5000;
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: "https://to-do-list-022.netlify.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
